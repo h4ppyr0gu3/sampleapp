@@ -1,0 +1,45 @@
+.navbar-end .navbar-item {
+	width: 110px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notification {
+	position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.foot_item {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-right: 10px;
+
+}
+
+.text {
+	font-size: 2rem;
+}
+
+.text_2 {
+	font-size: 1.5rem;
+}
+
+#notification_box {
+	position: absolute;
+  top: 10px;
+  right: 0px;
+  
+}
+
+.custom-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.hide_notification {
+	display: none;
+}

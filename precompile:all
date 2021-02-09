@@ -1,0 +1,85 @@
+Started with run options --seed 28308
+
+
+Progress: |[0m[1000D[K[31mERROR[0m["test_should_get_home", #<Minitest::Reporters::Suite:0x0000559c06dbe4b0 @name="StaticPagesControllerTest">, 0.5922787780000363]
+ test_should_get_home#StaticPagesControllerTest (0.59s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/static_pages_controller_test.rb:8:in `block in <class:StaticPagesControllerTest>'
+
+[32m=[0m[32m=[0m[32m=[0m[0m[1000D[K[31mERROR[0m["test_should_get_contact", #<Minitest::Reporters::Suite:0x0000559c06da45b0 @name="StaticPagesControllerTest">, 0.5935631610045675]
+ test_should_get_contact#StaticPagesControllerTest (0.59s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/static_pages_controller_test.rb:26:in `block in <class:StaticPagesControllerTest>'
+
+[0m[1000D[K[31mERROR[0m["test_should_get_signup", #<Minitest::Reporters::Suite:0x0000559c06d4d148 @name="StaticPagesControllerTest">, 0.6133044099988183]
+ test_should_get_signup#StaticPagesControllerTest (0.61s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/static_pages_controller_test.rb:32:in `block in <class:StaticPagesControllerTest>'
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[0m[1000D[K[31mERROR[0m["test_invalid_signup_information", #<Minitest::Reporters::Suite:0x0000559c06d167d8 @name="UsersSignupTest">, 0.6141467030101921]
+ test_invalid_signup_information#UsersSignupTest (0.61s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/integration/users_signup_test.rb:8:in `block in <class:UsersSignupTest>'
+
+[0m[1000D[K[31mERROR[0m["test_should_get_about", #<Minitest::Reporters::Suite:0x0000559c06cc05e0 @name="StaticPagesControllerTest">, 0.6182306130067445]
+ test_should_get_about#StaticPagesControllerTest (0.62s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/static_pages_controller_test.rb:20:in `block in <class:StaticPagesControllerTest>'
+
+[0m[1000D[K[31mERROR[0m["test_should_get_help", #<Minitest::Reporters::Suite:0x0000559c06c841a8 @name="StaticPagesControllerTest">, 0.6202834970026743]
+ test_should_get_help#StaticPagesControllerTest (0.62s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/static_pages_controller_test.rb:14:in `block in <class:StaticPagesControllerTest>'
+
+[0m[1000D[K[31mERROR[0m["test_valid_signup_information", #<Minitest::Reporters::Suite:0x0000559c06c3feb8 @name="UsersSignupTest">, 0.627221490998636]
+ test_valid_signup_information#UsersSignupTest (0.63s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/integration/users_signup_test.rb:21:in `block in <class:UsersSignupTest>'
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[0m[1000D[K[31mERROR[0m["test_should_get_new", #<Minitest::Reporters::Suite:0x0000559c06c184d0 @name="SessionsControllerTest">, 0.632125262010959]
+ test_should_get_new#SessionsControllerTest (0.63s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/sessions_controller_test.rb:5:in `block in <class:SessionsControllerTest>'
+
+[0m[1000D[K[31mERROR[0m["test_login_with_invalid_information", #<Minitest::Reporters::Suite:0x0000559c06bcb360 @name="UsersLoginTest">, 0.6347664580098353]
+ test_login_with_invalid_information#UsersLoginTest (0.63s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/integration/users_login_test.rb:6:in `block in <class:UsersLoginTest>'
+
+[0m[1000D[K[31mERROR[0m["test_login_with_valid_information", #<Minitest::Reporters::Suite:0x0000559c06b77d78 @name="UsersLoginTest">, 0.63952755300852]
+ test_login_with_valid_information#UsersLoginTest (0.64s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/integration/users_login_test.rb:16:in `block in <class:UsersLoginTest>'
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[0m[1000D[K[31mERROR[0m["test_should_get_new", #<Minitest::Reporters::Suite:0x0000559c06ad4ce0 @name="UsersControllerTest">, 0.6602159989997745]
+ test_should_get_new#UsersControllerTest (0.66s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/users_controller_test.rb:10:in `block in <class:UsersControllerTest>'
+
+[0m[1000D[K[31mERROR[0m["test_layout_links", #<Minitest::Reporters::Suite:0x0000559c06a81b58 @name="SiteLayoutTest">, 0.6624896430002991]
+ test_layout_links#SiteLayoutTest (0.66s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/integration/site_layout_test.rb:5:in `block in <class:SiteLayoutTest>'
+
+[0m[1000D[K[31mERROR[0m["test_should_get_signup", #<Minitest::Reporters::Suite:0x0000559c06a362e8 @name="UsersControllerTest">, 0.6632545940083219]
+ test_should_get_signup#UsersControllerTest (0.66s)
+Minitest::UnexpectedError:         ActionView::Template::Error: application.css
+            app/views/layouts/application.html.erb:8
+            test/controllers/users_controller_test.rb:15:in `block in <class:UsersControllerTest>'
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m|
+
+Finished in 0.80467s
+22 tests, 18 assertions, [31m0 failures, 13 errors, [0m[33m0 skips[0m

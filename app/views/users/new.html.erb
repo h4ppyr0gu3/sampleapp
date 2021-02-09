@@ -1,28 +1,45 @@
 
 <% provide(:title, "Sign up") %>
+<div class="columns">
+<div class="column is-10 is-offset-1">
+	<h1 class="text">Welcome to the signup page</h1>
+	<p class="text_2">Sign up page for new customers</p>
+	<%= form_for(@user) do |f| %>
 
+	<%= render'users/whateverthefuck' %>
 
+	<br>
+	<div class = "columns">
+		<div class = "column is-4">
 
-<h1>Welcome to the signup page</h1>
-<p>Sign up page for new customers</p>
-<div class = "row">
-	<div class = "col-md-6 col-md-offset-3">
-		<%= form_for(@user) do |f| %>
-		<%= render 'shared/error_messages' %>
-		
-		<%= f.label :name %>
-		<%= f.text_field :name %>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "input", type: "text", placeholder: "Full Name" %>
 
-		<%= f.label :email %>
-		<%= f.email_field :email %>
-
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-
-		<%= f.label :password_confirmation , "confirmation" %>
-		<%= f.password_field :password_confirmation %>
-
-		<%= f.submit "create my Account", class: "btn btn-primary" %>
-		<%end%>
+		</div>
 	</div>
+
+	<div class = "columns">
+		<div class = "column is-4">
+
+			<%= f.label :email %>
+			<%= f.email_field :email, class: "input", type: "text", placeholder: "Email address" %>
+		</div>
+	</div>
+	<div class = "columns">
+		<div class = "column is-4">
+			<%= f.label :password %>
+			<%= f.password_field :password, class: "input", type: "password", placeholder: "Password" %>
+		</div>
+	</div>
+
+	<div class = "columns">
+		<div class = "column is-4">
+			<%= f.label :password_confirmation , "confirmation" %>
+			<%= f.password_field :password_confirmation, class: "input", type: "password", placeholder: "Password" %>
+		</div>
+	</div>
+
+	<%= f.submit "create my Account", class: "button is-primary" %>
+	<%end%>
+</div>
 </div>

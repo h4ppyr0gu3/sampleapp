@@ -1,14 +1,22 @@
 <footer class = "footer">
-	<small>
+	<div class="columns">
+	<div class="column is-4">
+	<div class="content has-text-centred">
 		the <a href="https://google.com"> google </a>
 	</br>
 		the <a href="https://github.com/h4ppyr0gu3/"> official github site</a>
-	</small>
-	<nav>
-		<ul>
-			<li><%= link_to "About", about_path %></li>
-			<li><%= link_to "Contact", contact_path %></li>
-			<li> <a href="https://github.com/h4ppyr0gu3/"> News </a> </li>  
-		</ul>
-	</nav>
+	</div>
+</div>
+	<div class="column is-2 ">
+			<%= link_to "About", about_path, class: "foot_item"%>
+		</div>
+			<div class="column is-2">
+			<%= link_to "Contact", contact_path, class: "foot_item"%>
+		</div>
+		<div class="column is-2 foot_item">
+			<a href="https://github.com/h4ppyr0gu3/"> News </a>  
+		</div>
+</div>
+</div>
+
 </footer>

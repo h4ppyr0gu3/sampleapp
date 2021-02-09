@@ -1,13 +1,40 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-	<div class="container">
-		<%= link_to "sample app", root_path, id: "logo" %>
-		<nav>
-			<ul class = "nav navbar-nav navbar-right">
-				<li><%= link_to "Home", root_path%></li>
-				<li><%= link_to "Help", help_path%></li>
-				<li><%= link_to "Log in",   "#" %></li>
-				<!-- <li><%= link_to "Home",   "#" %></li> -->
-			</ul>
-		</nav>
-	</div>
-</header>
+
+<nav class="navbar container" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu has-text-black">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <%= link_to "SAMPLE APP", root_path, class: "is-size-2 is-button is-black is-bold" %>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <%= link_to "Home", root_path, class: "navbar-item" %>
+      <%= link_to "Help", help_path, class: "navbar-item" %>
+      <% if logged_in? %>
+        <div class="navbar-item has-dropdown" id="dropdown_button">
+          <a class="navbar-link">
+            Account
+          </a>
+          <div class="navbar-dropdown">
+            <%= link_to "Profile", user_path(current_user), class: "navbar-item" %>
+            <%= link_to "settings", root_path, class: "navbar-item" %>
+            <hr class="navbar-divider">
+            <%= link_to "Log out", logout_path, method: "delete", class: "navbar-item" %>
+          </div>
+      <% else %>
+        <div class="buttons">
+          <%= link_to "Log In", login_path, class: "navbar-item button is-primary" %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</nav>
+

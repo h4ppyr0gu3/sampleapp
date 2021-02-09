@@ -20,13 +20,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,21 +47,15 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'minitest'
+  gem "mini_backtrace", "~> 0.1.3"
+  gem "guard", "~> 2.16"
+  gem "minitest-reporters", "~> 1.4"
+  gem "rails-controller-testing", "~> 1.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
- gem 'minitest', group: :test
-# gem 'minitest-reporters', group: :tests
-gem "mini_backtrace", "~> 0.1.3"
-
-gem "guard", "~> 2.16"
-
-gem "bootstrap-sass", "~> 3.4"
-
-gem "minitest-reporters", "~> 1.4"
-
-gem "rails-controller-testing", "~> 1.0"
-
-gem "bcrypt", "~> 3.1"
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false

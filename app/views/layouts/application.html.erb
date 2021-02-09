@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- <link rel="icon" type="image/png" href="https://en.wikipedia.org/wiki/Google_logo#/media/File:Google_2015_logo.svg"/> -->
   <title><%=full_title(yield(:title)) %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <!-- [if it IE 9]> -->
   <%= render 'layouts/shim' %>
-
 </head>
 
 <body>
+    <%= csrf_meta_tags %>
+
   <%= render 'layouts/header' %>
-  
-  
+
   <div class = 'container'>
-    <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>">
-      <%= message %>
-    </div>
+    <% if !flash.empty? %>
+     <% flash.each do |message_type, message | %>
+      <div class="notification is-<%= message_type %>" id="notification_box">
+        <button class="delete" id="delete_btn"></button>
+          <% if message.class == String %>
+            <%= message %>
+
+          <% else %>
+            <% flash.each do |message_type, message| %>
+              <% message.each do |key, values| %>
+                <% values.each do |value| %>
+                  <%= key %> <%= value %>
+                  <br/>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+          
+        <% end %>
+      </div>
     <% end %>
+
     <%= yield %>
+
     <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+    <div class="columns">
+      <div class="column is-10 is-centre">
+        <%= debug(params) if Rails.env.development? %>
+      </div>
+    </div>
   </div>
+
+  <%= javascript_pack_tag 'navbar_toggle', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'delete_toggle', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>
+
+

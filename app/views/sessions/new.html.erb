@@ -1,0 +1,41 @@
+<% provide(:title, "log in") %>
+<div class="custom-center">
+	<div class="card m-5 p-5">
+	<h1 class="text has-text-centered"> Log in </h1>
+
+	<div class = "columns">
+		<div class = "column">
+			<%= form_for(:session, url: login_path) do |f| %>
+			<br>
+
+			<div class="columns">
+				<div class="column">
+					<!-- <input class="input" type="text" placeholder="Email address"> -->
+					<%= f.label :email %>
+					<%= f.email_field :email, class: "input", type: "text", placeholder: "Email address"%>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<%= f.label :password %>
+					<%= f.password_field :password, class: "input", type: "password", placeholder: "Password" %>
+				</div>
+			</div>
+			<%= f.label :remember_me, class: "checkbox" do%>
+			<%= f.check_box :remember_me %>
+			<span>Remember me on this computer</span>
+			<% end %>
+			<div class="columns">
+				<div class="column">
+					<%= f.submit "Log in", class: "button is-primary" %>
+					<%end%>
+				</div>
+			</div>
+			<p class="mt-2"> New user? <%= link_to " Sign up now!", new_user_path %></p>
+		</div>
+	</div>
+	</div>
+</div>
+
+
