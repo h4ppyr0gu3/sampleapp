@@ -18,15 +18,18 @@
       <%= link_to "Home", root_path, class: "navbar-item" %>
       <%= link_to "Help", help_path, class: "navbar-item" %>
       <% if logged_in? %>
+        <%= link_to "Users", users_path, class: "navbar-item" %>
         <div class="navbar-item has-dropdown" id="dropdown_button">
           <a class="navbar-link">
             Account
           </a>
           <div class="navbar-dropdown">
+
             <%= link_to "Profile", user_path(current_user), class: "navbar-item" %>
-            <%= link_to "settings", root_path, class: "navbar-item" %>
+            <%= link_to "settings", edit_user_path(current_user), class: "navbar-item" %>
             <hr class="navbar-divider">
-            <%= link_to "Log out", logout_path, method: "delete", class: "navbar-item" %>
+
+            <%= button_to "Log out", logout_path, :method => :delete, class: "navbar-item" %>
           </div>
       <% else %>
         <div class="buttons">

@@ -1,0 +1,26 @@
+h1 Update your profile
+.columns
+	.column.is-6.is-offset-3
+		= form_for(@user) do |f|
+			= render 'shared/error_messages'
+
+			.field
+				= f.label :name, class: "label"
+				= f.text_field :name, class: "form-control input", type: "text", placeholder: "name"
+
+			.field
+				= f.label :email, class: "label"
+				= f.text_field :email, class: "form-control input", type: "text", placeholder: "email address"
+
+			.field
+				= f.label :password, class: "label"
+				= f.password_field :password, class: "form-control input", type: "password", placeholder: "password"
+
+			.field
+				= f.label :password_confirmation, class: "label"
+				= f.password_field :password_confirmation, class: "form-control input", type: "password", placeholder: "password"
+
+			.field
+				= f.submit "Save changes", class: "button is-primary"
+
+			

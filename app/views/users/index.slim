@@ -1,0 +1,15 @@
+= provide(:title, "all users")
+.container
+	h1 All users
+
+	ul.users
+
+		= @users.count
+		ul
+			= render @users
+
+		
+	.card.pt-5
+		.columns
+			.column.is-6.is-offset-3
+				= paginate @users

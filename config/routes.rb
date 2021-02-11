@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   # get 'user/:id',   to: 'users#show', as: 'user'
 
   resources :users
-  # , only: %i[create edit new show]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
